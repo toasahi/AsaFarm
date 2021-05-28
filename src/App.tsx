@@ -1,4 +1,4 @@
-import './App.css';
+// import './App.css';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { Home } from 'components/pages/Home';
 import { Page404 } from 'components/pages/Page404';

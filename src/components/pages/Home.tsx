@@ -1,9 +1,10 @@
 import { memo, VFC } from 'react';
+import { Login } from './Login';
 
 export const Home: VFC = memo(() => {
   return (
     <div>
-      <h1>ホームです</h1>
+      <Login />
     </div>
   );
 });
