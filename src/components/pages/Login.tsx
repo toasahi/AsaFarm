@@ -1,10 +1,12 @@
 import { PrimaryButton } from 'components/atoms/PrimaryButton';
 import { PrimaryInput } from 'components/atoms/PrimaryInput';
 import { ChangeEvent, memo, useState, VFC } from 'react';
+import { Link } from 'react-router-dom';
 
 export const Login: VFC = memo(() => {
   const [userEmail, setUserEmail] = useState('');
   const [userPass, setUserPass] = useState('');
+  const [userLogin, setUserLogin] = useState(true);
   const onChangeUserEmail = (event: ChangeEvent<HTMLInputElement>) => setUserEmail(event.target.value);
   const onChangeUserPass = (event: ChangeEvent<HTMLInputElement>) => setUserPass(event.target.value);
   return (
@@ -40,7 +42,9 @@ export const Login: VFC = memo(() => {
                   <div className="flex justify-between items-center">
                     <div className="text-sm font-bold text-gray-600 tracking-wide">Password</div>
                     <div>
-                      <a className="text-xs font-semibold text-green-600 hover:text-green-800">Forgot Password</a>
+                      <Link to="#" className="text-xs font-semibold text-green-600 hover:text-green-800">
+                        Forgot Password
+                      </Link>
                     </div>
                   </div>
                   {/* <input
@@ -63,7 +67,9 @@ export const Login: VFC = memo(() => {
               </form>
               <div className="mt-12 text-base font-semibold text-gray-500 text-center">
                 Don't have an account?
-                <a className="cursor-pointer text-green-600 hover:text-green-800">Sign Up</a>
+                <Link to="#" className="cursor-pointer text-green-600 hover:text-green-800">
+                  Sign Up
+                </Link>
               </div>
             </div>
           </div>
