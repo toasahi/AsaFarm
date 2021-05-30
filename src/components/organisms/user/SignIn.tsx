@@ -54,7 +54,7 @@ export const SignIn: VFC<Props> = memo((props) => {
         </form>
         <div className="mt-12 text-base font-semibold text-gray-500 text-center">
           Don't have an account?
-          <Link to="#" onClick={onClickLogin} className="cursor-pointer text-green-600 hover:text-green-800">
+          <Link to="#" onClick={onClickLogin} className="cursor-pointer text-green-600 hover:text-green-800  ml-2">
             Sign Up
           </Link>
         </div>

@@ -26,12 +26,12 @@ export const SignUp: VFC<Props> = memo((props) => {
       <div className="mt-8">
         <form>
           <div className="mt-8">
-            <div className="text-sm font-bold text-gray-600 tracking-wide">姓</div>
-            <PrimaryInput inputType="text" value={firstName} onChange={onChangeFirstName} placeholder="戸田" />
+            <div className="text-sm font-bold text-gray-600 tracking-wide">FirstName</div>
+            <PrimaryInput inputType="text" value={firstName} onChange={onChangeFirstName} placeholder="Toda" />
           </div>
           <div className="mt-8">
-            <div className="text-sm font-bold text-gray-600 tracking-wide">名前</div>
-            <PrimaryInput inputType="text" value={lastName} onChange={onChangeLastName} placeholder="麻陽" />
+            <div className="text-sm font-bold text-gray-600 tracking-wide">LastName</div>
+            <PrimaryInput inputType="text" value={lastName} onChange={onChangeLastName} placeholder="Asahi" />
           </div>
           <div className="mt-8">
             <div className="text-sm font-bold text-gray-600 tracking-wide">Email</div>
@@ -66,7 +66,11 @@ export const SignUp: VFC<Props> = memo((props) => {
         </form>
         <div className="mt-6 text-base font-semibold text-gray-500 text-center">
           I have an account?
-          <Link to="#" onClick={() => onClickLogin()} className="cursor-pointer text-green-600 hover:text-green-800">
+          <Link
+            to="#"
+            onClick={() => onClickLogin()}
+            className="cursor-pointer text-green-600 hover:text-green-800 ml-2"
+          >
             Sign In
           </Link>
         </div>
