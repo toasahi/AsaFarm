@@ -4,7 +4,16 @@ import { Link } from 'react-router-dom';
 import { PrimaryInput } from '../../atoms/PrimaryInput';
 import { PrimaryButton } from 'components/atoms/PrimaryButton';
 
-export const SignUp: VFC = memo(() => {
+type Props = {
+  userEmail: string;
+  userPass: string;
+  onChangeUserEmail: (event: ChangeEvent<HTMLInputElement>) => void;
+  onChangeUserPass: (event: ChangeEvent<HTMLInputElement>) => void;
+  onClickLogin: () => void;
+};
+
+export const SignUp: VFC<Props> = memo((props) => {
+  const { userEmail, userPass, onChangeUserEmail, onChangeUserPass, onClickLogin } = props;
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const onChangeFirstName = (event: ChangeEvent<HTMLInputElement>) => setFirstName(event.target.value);
@@ -14,39 +23,29 @@ export const SignUp: VFC = memo(() => {
       <h2 className="text-center text-4xl font-semibold text-green-800 lg:text-left xl:text-5xl xl:font-bold">
         Sign Up
       </h2>
-      <div className="mt-12">
+      <div className="mt-8">
         <form>
           <div className="mt-8">
             <div className="text-sm font-bold text-gray-600 tracking-wide">姓</div>
-            {/* <PrimaryInput
-              inputType="text"
-              value={userEmail}
-              onChange={onChangeUserEmail}
-              placeholder="戸田"
-            /> */}
+            <PrimaryInput inputType="text" value={firstName} onChange={onChangeFirstName} placeholder="戸田" />
           </div>
           <div className="mt-8">
             <div className="text-sm font-bold text-gray-600 tracking-wide">名前</div>
-            {/* <PrimaryInput
-              inputType="text"
-              value={userEmail}
-              onChange={onChangeUserEmail}
-              placeholder="麻陽"
-            /> */}
+            <PrimaryInput inputType="text" value={lastName} onChange={onChangeLastName} placeholder="麻陽" />
           </div>
           <div className="mt-8">
             <div className="text-sm font-bold text-gray-600 tracking-wide">Email</div>
 
-            {/* <PrimaryInput
+            <PrimaryInput
               inputType="text"
               value={userEmail}
               onChange={onChangeUserEmail}
               placeholder="test@test.gmail"
-            /> */}
+            />
           </div>
           <div className="mt-8">
             <div className="flex justify-between items-center">
-              <div className="text-sm font-bold text-gray-600 tracking-wide">Password</div>
+              <div className="text-sm font-bold text-gray-600 tracking-wide">パスワード</div>
               <div>
                 <Link to="#" className="text-xs font-semibold text-green-600 hover:text-green-800">
                   Forgot Password
@@ -54,20 +53,20 @@ export const SignUp: VFC = memo(() => {
               </div>
             </div>
 
-            {/* <PrimaryInput
+            <PrimaryInput
               inputType="password"
               value={userPass}
               onChange={onChangeUserPass}
               placeholder="Enter Your Password"
-            /> */}
+            />
           </div>
           <div className="mt-10">
-            <PrimaryButton>Log In</PrimaryButton>
+            <PrimaryButton>Sign Up</PrimaryButton>
           </div>
         </form>
-        <div className="mt-12 text-base font-semibold text-gray-500 text-center">
+        <div className="mt-6 text-base font-semibold text-gray-500 text-center">
           I have an account?
-          <Link to="#" onClick={()=>console.log()} className="cursor-pointer text-green-600 hover:text-green-800">
+          <Link to="#" onClick={() => onClickLogin()} className="cursor-pointer text-green-600 hover:text-green-800">
             Sign In
           </Link>
         </div>
