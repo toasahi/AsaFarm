@@ -44,14 +44,7 @@ export const SignUp: VFC<Props> = memo((props) => {
             />
           </div>
           <div className="mt-8">
-            <div className="flex justify-between items-center">
-              <div className="text-sm font-bold text-gray-600 tracking-wide">Password</div>
-              <div>
-                <Link to="#" className="text-xs font-semibold text-green-600 hover:text-green-800">
-                  Forgot Password
-                </Link>
-              </div>
-            </div>
+            <div className="text-sm font-bold text-gray-600 tracking-wide">Password</div>
 
             <PrimaryInput
               inputType="password"
