@@ -1,6 +1,7 @@
 import { Icon } from 'components/atoms/Icon';
 import { SignUp } from 'components/organisms/user/SignUp';
 import { ChangeEvent, memo, useState, VFC } from 'react';
+import { Link } from 'react-router-dom';
 
 import { SignIn } from '../organisms/user/SignIn';
 
@@ -15,7 +16,10 @@ export const Login: VFC = memo(() => {
     <>
       <div className="lg:flex">
         <div className="lg:w-1/2 xl:max-w-screen-sm">
-          <Icon />
+          <Link to="/" className="py-12 bg-green-100 lg:bg-white flex justify-center lg:justify-start lg:px-12">
+            <div></div>
+            <div className="text-2xl text-green-700 tracking-wide ml-2 font-semibold">AsaFarm</div>
+          </Link>
           <div className="mt-10 px-12 sm:px-24 md:px-48 lg:px-12 lg:mt-8 xl:mt-8 xl:max-w-screen-2xl">
             {userLogin ? (
               <SignIn
