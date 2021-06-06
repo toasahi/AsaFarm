@@ -9,7 +9,7 @@ type Props = {
 export const Icon: VFC<Props> = memo((props) => {
   // const {margin,padding} = props;
   return (
-    <Link to="/" className="py-5 bg-green-100 lg:bg-white flex justify-center lg:justify-start lg:px-5">
+    <Link to="/home" className="py-5 bg-green-100 lg:bg-white flex justify-center lg:justify-start lg:px-5">
       <svg
         className="fill-current h-8 w-8 mr-2"
         width="54"
