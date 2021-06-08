@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 
 export const Header: VFC = memo(() => {
   return (
-    <header>
-      <nav className="flex items-center justify-between flex-wrap p-6 bg-green-500">
+    <header className="bg-gray-100">
+      <nav className="flex items-center justify-between flex-wrap px-8 bg-white h-24">
         <div className="flex items-center flex-shrink-0 text-white mr-6">
           <Icon />
         </div>
@@ -17,18 +17,34 @@ export const Header: VFC = memo(() => {
             </svg>
           </button>
         </div>
-        <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
-          <div className="text-sm lg:flex-grow">
-            <Link to="/home/About" className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+        <ul className="hidden lg:flex lg:items-center lg:w-auto lg:h-full">
+          <li className="inline-block">
+            <Link
+              to="/home/About"
+              className="block mt-4 text-xl text-center font-light lg:inline-block lg:mt-0 mr-8 hover:border-b-2  hover:border-green-300"
+            >
               About
             </Link>
-            <Link to="/home/Service" className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+          </li>
+          <li className="inline-block">
+            <Link
+              to="/home/Service"
+              className="block mt-4 text-xl font-light lg:inline-block lg:mt-0 mr-8 hover:border-b-2  hover:border-green-300"
+            >
               Service
             </Link>
-            <Link to="/home/Login" className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white">
+          </li>
+          <li className="inline-block">
+            <Link
+              to="/home/Login"
+              className="block mt-4 text-xl font-light lg:inline-block lg:mt-0 mr-8 hover:border-b-2  hover:border-green-300"
+            >
               Login
             </Link>
-          </div>
+          </li>
+        </ul>
+        <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+          <div className="text-sm lg:flex-grow"></div>
         </div>
       </nav>
     </header>
