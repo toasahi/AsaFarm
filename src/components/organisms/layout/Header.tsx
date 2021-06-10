@@ -1,10 +1,11 @@
 import { Icon } from 'components/atoms/Icon';
+import { Polygon } from 'components/atoms/Polygon';
 import { memo, VFC } from 'react';
 import { Link } from 'react-router-dom';
 
 export const Header: VFC = memo(() => {
   return (
-    <header className="bg-gray-100">
+    <header>
       <nav className="flex items-center justify-between flex-wrap px-8 bg-white h-24">
         <div className="flex items-center flex-shrink-0 text-white mr-6">
           <Icon />
@@ -18,23 +19,40 @@ export const Header: VFC = memo(() => {
           </button>
         </div>
         <ul className="hidden lg:flex lg:items-center lg:w-auto lg:h-full">
-          <li className="inline-block">
+          <li className="flex items-center mr-8">
             <Link
-              to="/home/About"
+              to="/home/vegetable"
+              className="block mt-4 text-xl text-center font-light lg:inline-block lg:mt-0  hover:border-b-2  hover:border-green-300"
+            >
+              野菜
+            </Link>
+            <Polygon />
+          </li>
+          <li className="">
+            <Link
+              to="/home/news"
               className="block mt-4 text-xl text-center font-light lg:inline-block lg:mt-0 mr-8 hover:border-b-2  hover:border-green-300"
             >
-              About
+              ニュース
             </Link>
           </li>
-          <li className="inline-block">
+          <li className="k">
             <Link
-              to="/home/Service"
+              to="/home/service"
               className="block mt-4 text-xl font-light lg:inline-block lg:mt-0 mr-8 hover:border-b-2  hover:border-green-300"
             >
-              Service
+              サービス
             </Link>
           </li>
-          <li className="inline-block">
+          <li className="">
+            <Link
+              to="/home/contact"
+              className="block mt-4 text-xl text-center font-light lg:inline-block lg:mt-0 mr-8 hover:border-b-2  hover:border-green-300"
+            >
+              お問い合わせ
+            </Link>
+          </li>
+          <li className="">
             <Link
               to="/home/Login"
               className="block mt-4 text-xl font-light lg:inline-block lg:mt-0 mr-8 hover:border-b-2  hover:border-green-300"
