@@ -1,5 +1,6 @@
+import { Main } from 'components/layout/Main';
 import { memo, VFC } from 'react';
 
 export const Contact: VFC = memo(() => {
-  return <>お問い合わせ</>;
+  return <Main>お問い合わせ</Main>;
 });

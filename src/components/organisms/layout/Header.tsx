@@ -2,12 +2,14 @@ import { Icon } from 'components/atoms/Icon';
 import { Polygon } from 'components/atoms/Polygon';
 import { SecondaryButton } from 'components/atoms/SecondaryButton';
 import { memo, VFC } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 export const Header: VFC = memo(() => {
+  const history = useHistory();
+  const onClickLogin = () => history.push('/home/login');
   return (
-    <header className="flex justify-between w-full fixed">
-      <nav className="flex items-center justify-between flex-wrap px-10 bg-white h-24">
+    <header className="flex justify-between w-full fixed z-10 bg-white">
+      <nav className="flex items-center justify-between flex-wrap px-10  h-24">
         <div className="flex items-center flex-shrink-0 text-white mr-6">
           <Icon />
         </div>
@@ -52,7 +54,7 @@ export const Header: VFC = memo(() => {
       </nav>
       <div className="">
         <div className="mt-4 pr-24">
-          <SecondaryButton>ログイン</SecondaryButton>
+          <SecondaryButton onClick={onClickLogin}>ログイン</SecondaryButton>
         </div>
         <div className="block lg:hidden">
           <button className="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
