@@ -7,12 +7,12 @@ export const Home: VFC = memo(() => {
     <Main>
       ホームページ
       <main>
-        <section className="mt-20 relative" style={{ height: 550 }}>
+        <section className="mt-20 relative md:h-lg lg:h-xl">
           <div
-            className="bg-cover bg-center lg:h-full"
+            className="bg-cover bg-center h-full"
             style={{ backgroundImage: `url("https://source.unsplash.com/QFmNQXLPbZc")` }}
           >
-            <div className="inline-block bg-white rounded-lg lg:h-4/5 lg:w-96 lg:mt-16 lg:mr-36 lg:absolute lg:right-0"></div>
+            <div className="inline-block bg-white rounded-lg absolute right-0 h-4/5  md:w-72 md:mt-12 md:mr-28 lg:w-96 lg:mt-16 lg:mr-36 "></div>
           </div>
           {/* <img src="https://source.unsplash.com/QFmNQXLPbZc" className="w-full h-96 " /> */}
         </section>
