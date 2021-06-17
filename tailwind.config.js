@@ -5,10 +5,10 @@ module.exports = {
     extend: {
       height: {
         sm: '8px',
-        md: '16px',
-        lg: '400px',
-        xl: '550px',
-      }
+        md: '400px',
+        lg: '550px',
+        xl: '600px',
+      },
     },
   },
   variants: {
