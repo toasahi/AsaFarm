@@ -14,14 +14,17 @@ export const Home: VFC = memo(() => {
           >
             <div className="inline-block bg-white rounded-lg absolute right-0 h-4/5  md:w-72 md:mt-12 md:mr-28 lg:w-96 lg:mt-16 lg:mr-36 "></div>
           </div>
-          {/* <img src="https://source.unsplash.com/QFmNQXLPbZc" className="w-full h-96 " /> */}
         </section>
         <section className="container mx-auto p-2 md:mt-14 lg:mt-28">
           <h2 className="font-bold text-5xl">好きな野菜を見つけよう</h2>
           <nav className="flex justify-between mt-12">
             <div className="w-5/6 px-3">
               <div className="h-56 w-full lg:h-72 lg:w-80 shadow-lg">
-                <img src={ygvegetable} className="h-full w-full hover:opacity-70 lg:w-full lg:h-full rounded-xl" />
+                <img
+                  src={ygvegetable}
+                  className="h-full w-full hover:opacity-70 lg:w-full lg:h-full rounded-xl"
+                  alt="野菜"
+                />
               </div>
               <p className="lg:text-2xl font-semibold lg:mt-8">緑黄色野菜</p>
             </div>
@@ -35,10 +38,10 @@ export const Home: VFC = memo(() => {
             </div>
           </nav>
         </section>
-        <section className="container mx-auto md:mt-14  lg:mt-28">
+        <section className="container p-3 mx-auto md:mt-14  lg:mt-28">
           <div className="h-72 w-full bg-black rounded-xl opacity-20 shadow-xl hover:cursor-pointer hover:opacity-30"></div>
         </section>
-        <section className="container mx-auto md:mt-14 lg:mt-28">
+        {/* <section className="container mx-auto md:mt-14 lg:mt-28">
           <h2 className="font-bold text-5xl">体験を検索</h2>
           <p className="lg:mt-4 lg:text-lg">農家さんが開催する、直接対面型または実践型のユニークな体験</p>
           <nav className="flex justify-between mt-12">
@@ -60,7 +63,7 @@ export const Home: VFC = memo(() => {
         </section>
         <section className="container mx-auto lg:mt-28">
           <div className="h-72 w-full bg-black rounded-xl opacity-20 shadow-xl hover:cursor-pointer hover:opacity-30"></div>
-        </section>
+        </section> */}
       </main>
     </Main>
   );

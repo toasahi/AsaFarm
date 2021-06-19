@@ -1,4 +1,3 @@
-import { Icon } from 'components/atoms/Icon';
 import { SignUp } from 'components/organisms/user/SignUp';
 import { ChangeEvent, memo, useState, VFC } from 'react';
 import { Link } from 'react-router-dom';

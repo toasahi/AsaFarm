@@ -6,7 +6,7 @@ type Props = {
 };
 
 export const PrimaryButton: VFC<Props> = memo((props) => {
-  const { children, onClick } = props;
+  const { children } = props;
   return (
     <button
       className="bg-green-500 text-gray-100 p-4 w-full rounded-full tracking-wide

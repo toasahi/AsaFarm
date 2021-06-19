@@ -9,15 +9,18 @@ module.exports = {
         lg: '550px',
         xl: '600px',
       },
+      textColor: {
+        primary: '#1b1b1b',
+      },
     },
   },
   variants: {
     extend: {
-      // borderWidth: ['hover'],
       cursor: ['hover', 'focus'],
       opacity: ['active'],
       boxShadow: ['active'],
       borderWidth: ['hover', 'focus'],
+      textColor: ['active'],
     },
   },
   plugins: [],
