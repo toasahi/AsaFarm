@@ -5,9 +5,9 @@ export const Footer: VFC = memo(() => {
   return (
     <footer className="mt-12 border-t-2 border-gray-300 w-full bg-gray-50 lg:h-96 lg:mt-32">
       <div className="container mx-auto p-5 flex flex-wrap md:justify-between lg:p-8">
-        <nav className="w-1/2 md:w-1/4">
+        <nav className="w-1/2 p-2 md:w-1/4">
           <h3 className="mb-5 font-semibold">体験したい</h3>
-          <ul>
+          <ul className="text-sm">
             <li className="mb-3 lg:mb-5">
               <Link to="/" className="text-primary">
                 AsaFarmとは
@@ -30,9 +30,9 @@ export const Footer: VFC = memo(() => {
             </li>
           </ul>
         </nav>
-        <nav className="w-1/2 md:w-1/4">
+        <nav className="w-1/2 p-2 md:w-1/4">
           <h3 className="mb-5 font-semibold">コミュニティ</h3>
-          <ul>
+          <ul className="text-sm">
             <li className="mb-3 lg:mb-5">
               <Link to="/" className="text-primary">
                 ブログ
@@ -40,9 +40,9 @@ export const Footer: VFC = memo(() => {
             </li>
           </ul>
         </nav>
-        <nav className="w-1/2 md:w-1/4">
+        <nav className="w-1/2 p-2 md:w-1/4">
           <h3 className="mb-5 font-semibold">AsaFarmについて</h3>
-          <ul>
+          <ul className="text-sm">
             <li className="mb-3 lg:mb-5">
               <Link to="/" className="text-primary">
                 お問い合わせ
@@ -65,9 +65,9 @@ export const Footer: VFC = memo(() => {
             </li>
           </ul>
         </nav>
-        <nav className=" w-1/2 md:w-1/4">
+        <nav className="w-1/2 p-2 md:w-1/4">
           <h3 className="mb-5 font-semibold">地域</h3>
-          <ul>
+          <ul className="text-sm">
             <li className="mb-3 lg:mb-5">
               <Link to="/" className="text-primary">
                 地域から探す
@@ -88,7 +88,7 @@ export const Footer: VFC = memo(() => {
           <li></li>
           <li></li>
         </ul>
-        <small className="text-primary opacity-50">&copy; 2021 AsaFarm</small>
+        <small className="text-primary text-center block opacity-50">&copy; 2021 AsaFarm</small>
       </div>
     </footer>
   );

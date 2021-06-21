@@ -1,5 +1,6 @@
 import { Main } from 'components/layout/Main';
 import { memo, VFC } from 'react';
+import { Link } from 'react-router-dom';
 import ygvegetable from '../../Images/ygvegetable.jpeg';
 
 export const Home: VFC = memo(() => {
@@ -16,30 +17,32 @@ export const Home: VFC = memo(() => {
           </div>
         </section>
         <section className="container mx-auto p-2 md:mt-14 lg:mt-28">
-          <h2 className="font-bold text-5xl">好きな野菜を見つけよう</h2>
-          <nav className="flex justify-between mt-12">
-            <div className="w-5/6 px-3">
-              <div className="h-56 w-full lg:h-72 lg:w-80 shadow-lg">
-                <img
-                  src={ygvegetable}
-                  className="h-full w-full hover:opacity-70 lg:w-full lg:h-full rounded-xl"
-                  alt="野菜"
-                />
+          <h2 className="font-semibold text-3xl md:font-bold md:text-5xl">好きな野菜を見つけよう</h2>
+          <nav className="flex overflow-x-scroll  justify-between mt-12">
+            <div className="w-1/3 px-3 flex-70 sm:flex-0">
+              <div className="h-56 w-full rounded-xl lg:h-72 lg:w-80 shadow-lg">
+                <Link to="/">
+                  <img
+                    src={ygvegetable}
+                    className="h-full w-full rounded-xl hover:opacity-70 lg:w-full lg:h-full"
+                    alt="野菜"
+                  />
+                </Link>
               </div>
               <p className="lg:text-2xl font-semibold lg:mt-8">緑黄色野菜</p>
             </div>
-            <div className="w-5/6 px-3">
+            <div className="w-1/3 px-3 flex-70 sm:flex-0">
               <div className="h-56 w-full lg:h-72 lg:w-80 bg-black rounded-xl opacity-20 shadow-xl hover:cursor-pointer hover:opacity-30"></div>
               <p className="lg:text-2xl font-semibold lg:mt-8">淡色野菜</p>
             </div>
-            <div className="w-5/6 px-3">
+            <div className="w-1/3 px-3 flex-70 sm:flex-0">
               <div className="h-56 w-full lg:h-72 lg:w-80 bg-black rounded-xl opacity-20 shadow-xl hover:cursor-pointer hover:opacity-30"></div>
               <p className="lg:text-2xl font-semibold lg:mt-8">いも類</p>
             </div>
           </nav>
         </section>
         <section className="container p-3 mx-auto md:mt-14  lg:mt-28">
-          <div className="h-72 w-full bg-black rounded-xl opacity-20 shadow-xl hover:cursor-pointer hover:opacity-30"></div>
+          <div className="h-48 sm:h-72 w-full bg-black rounded-xl opacity-20 shadow-xl hover:cursor-pointer hover:opacity-30"></div>
         </section>
         {/* <section className="container mx-auto md:mt-14 lg:mt-28">
           <h2 className="font-bold text-5xl">体験を検索</h2>

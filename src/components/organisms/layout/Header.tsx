@@ -23,26 +23,28 @@ export const Header: VFC = memo(() => {
   ];
   return (
     <header className="flex justify-between w-full fixed z-10 bg-white">
-      <nav className="flex items-center justify-between flex-wrap px-10  h-24">
+      <nav className="flex items-center justify-between flex-wrap px-10 h-24">
         <div className="flex items-center flex-shrink-0 text-white mr-6">
           <Icon />
         </div>
-        <ul className="hidden lg:flex lg:items-center lg:w-auto lg:h-full">
-          <li className="flex items-center mr-8">
-            <Link
-              to="/home/vegetable"
-              className="block mt-4 text-xl text-center font-light lg:inline-block lg:mt-0  hover:border-b-2  hover:border-green-300"
-            >
-              野菜
-            </Link>
-            <Polygon />
+        <ul className="hidden lg:flex md:items-center md:w-auto md:h-full">
+          <li className="">
+            <div className="flex items-center mt-0 mr-8">
+              <Link
+                to="/home/vegetable"
+                className="block text-xl text-center font-light lg:inline-block  hover:border-b-2  hover:border-green-300"
+              >
+                野菜
+              </Link>
+              <Polygon />
+            </div>
           </li>
           {headerRoute.map((route, index) => (
             <li className="">
               <Link
                 key={index}
                 to={route.to}
-                className="block mt-4 text-xl text-center font-light lg:inline-block lg:mt-0 mr-8 hover:border-b-2  hover:border-green-300"
+                className="block mt-0 text-xl text-center font-light lg:inline-block mr-8 hover:border-b-2  hover:border-green-300"
               >
                 {route.children}
               </Link>
@@ -53,11 +55,11 @@ export const Header: VFC = memo(() => {
           <div className="text-sm lg:flex-grow"></div>
         </div>
       </nav>
-      <div className="flex justify-between">
-        <div className="mt-5 xl:pr-24 lg:pr-24">
+      <div className="flex justify-between items-center  sm:px-12">
+        <div className="pr-4 lg:pr-24">
           <SecondaryButton onClick={onClickLogin}>ログイン</SecondaryButton>
         </div>
-        <div className="block mt-5 pr-2 lg:hidden">
+        <div className="block pr-2 lg:hidden">
           <button className="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:border-green-300">
             <svg className="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
               <title>Menu</title>

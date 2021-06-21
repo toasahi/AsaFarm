@@ -1,3 +1,5 @@
 body{
-  font-family: '游ゴシック','ヒラギノ角ゴ ProN';
+  /* font-family: '游ゴシック','ヒラギノ角ゴ ProN'; */
+  font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体",
+  "Open Sans", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
 }

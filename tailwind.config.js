@@ -12,6 +12,10 @@ module.exports = {
       textColor: {
         primary: '#1b1b1b',
       },
+      flex: {
+        0: 'none',
+        70: '0 0 70%',
+      },
     },
   },
   variants: {
@@ -21,6 +25,7 @@ module.exports = {
       boxShadow: ['active'],
       borderWidth: ['hover', 'focus'],
       textColor: ['active'],
+      flex: ['responsive', 'hover', 'focus'],
     },
   },
   plugins: [],
