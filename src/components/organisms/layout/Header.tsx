@@ -22,9 +22,9 @@ export const Header: VFC = memo(() => {
     },
   ];
   return (
-    <header className="flex justify-between w-full fixed z-10 bg-white">
-      <nav className="flex items-center justify-between flex-wrap px-10 h-24">
-        <div className="flex items-center flex-shrink-0 text-white mr-6">
+    <header className="flex justify-between w-full sticky top-0 z-10 bg-gray-50">
+      <nav className="flex items-center justify-between px-10 h-24">
+        <div className="flex items-center  text-white mr-6">
           <Icon />
         </div>
         <ul className="hidden lg:flex md:items-center md:w-auto md:h-full">
