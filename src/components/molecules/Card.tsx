@@ -10,7 +10,7 @@ type Props = {
 export const Card: VFC<Props> = memo((props) => {
   const { imageUrl, imageDescription, children } = props;
   return (
-    <div className="w-1/3 px-3 flex-70 sm:flex-0">
+    <div className="w-1/3 pr-3 flex-70 sm:flex-0">
       <div className="h-56 w-full rounded-xl lg:h-72 lg:w-80 shadow-lg">
         <Link to="/">
           <img

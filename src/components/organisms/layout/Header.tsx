@@ -1,11 +1,13 @@
 import { Icon } from 'components/atoms/Icon';
 import { Polygon } from 'components/atoms/Polygon';
 import { SecondaryButton } from 'components/atoms/SecondaryButton';
-import { memo, VFC } from 'react';
+import { memo, useState, VFC } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 
 export const Header: VFC = memo(() => {
   const history = useHistory();
+  const [drop, setDrop] = useState(false);
+  const onClickDrop = () => console.log(1);
   const onClickLogin = () => history.push('/home/login');
   const headerRoute = [
     {
@@ -29,14 +31,11 @@ export const Header: VFC = memo(() => {
         </div>
         <ul className="hidden lg:flex md:items-center md:w-auto md:h-full">
           <li className="">
-            <div className="flex items-center mt-0 mr-8">
-              <Link
-                to="/home/vegetable"
-                className="block text-xl text-center font-light lg:inline-block  hover:border-b-2  hover:border-green-300"
-              >
+            <div className="flex items-center mt-0 mr-8 hover:mb-2.5">
+              <Link to="/home/vegetable" className="block text-xl text-center font-light lg:inline-block">
                 野菜
               </Link>
-              <Polygon />
+              <Polygon onClickDrop={onClickDrop} drop={drop} />
             </div>
           </li>
           {headerRoute.map((route, index) => (

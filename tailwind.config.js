@@ -20,6 +20,7 @@ module.exports = {
   },
   variants: {
     extend: {
+      margin: ['hover', 'focus'],
       cursor: ['hover', 'focus'],
       opacity: ['active'],
       boxShadow: ['active'],

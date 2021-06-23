@@ -14,8 +14,8 @@ export const Contact: VFC = memo(() => {
   const onChangeMatter = (event: ChangeEvent<HTMLTextAreaElement>) => setMatter(event.target.value);
   return (
     <Main>
-      <div className="">
-        <h1 className="text-2xl font-semibold text-center mt-9">お問い合わせ</h1>
+      <div className="md:w-3/5 xl:w-1/2 md:mx-auto">
+        <h1 className="text-3xl font-semibold text-center mt-9">お問い合わせ</h1>
         <form>
           <div className="container mx-auto">
             <div className="px-10 mt-4 text-md font-bold text-gray-600 tracking-wide">

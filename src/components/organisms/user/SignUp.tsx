@@ -20,8 +20,8 @@ export const SignUp: VFC<Props> = memo((props) => {
   const onChangeLastName = (event: ChangeEvent<HTMLInputElement>) => setLastName(event.target.value);
   return (
     <>
-      <h2 className="text-center text-4xl font-semibold text-green-800 lg:text-left xl:text-5xl xl:font-bold">
-        Sign Up
+      <h2 className="text-center text-4xl font-semibold text-primary lg:text-left xl:text-2xl xl:font-bold">
+        AsaFarmで始めましょう
       </h2>
       <div className="mt-8">
         <form>
@@ -34,7 +34,7 @@ export const SignUp: VFC<Props> = memo((props) => {
             <PrimaryInput inputType="text" value={lastName} onChange={onChangeLastName} placeholder="Asahi" />
           </div>
           <div className="mt-8">
-            <div className="text-sm font-bold text-gray-600 tracking-wide">Email</div>
+            <div className="text-sm font-bold text-gray-600 tracking-wide">メールアドレス</div>
 
             <PrimaryInput
               inputType="text"
@@ -44,7 +44,7 @@ export const SignUp: VFC<Props> = memo((props) => {
             />
           </div>
           <div className="mt-8">
-            <div className="text-sm font-bold text-gray-600 tracking-wide">Password</div>
+            <div className="text-sm font-bold text-gray-600 tracking-wide">パスワード</div>
 
             <PrimaryInput
               inputType="password"
@@ -54,17 +54,17 @@ export const SignUp: VFC<Props> = memo((props) => {
             />
           </div>
           <div className="mt-10">
-            <PrimaryButton>Sign Up</PrimaryButton>
+            <PrimaryButton>アカウントを作成</PrimaryButton>
           </div>
         </form>
         <div className="mt-6 text-base font-semibold text-gray-500 text-center">
-          I have an account?
+          すでにアカウントをお持ちですか？
           <Link
             to="#"
             onClick={() => onClickLogin()}
             className="cursor-pointer text-green-600 hover:text-green-800 ml-2"
           >
-            Sign In
+            ログイン
           </Link>
         </div>
       </div>

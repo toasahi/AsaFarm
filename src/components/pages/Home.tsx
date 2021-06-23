@@ -92,10 +92,10 @@ export const Home: VFC = memo(() => {
             </div>
           </nav> */}
         </section>
-        <section className="container p-3 mx-auto md:mt-14  lg:mt-28">
+        <section className="container mt-5 p-3 mx-auto md:mt-14  lg:mt-28">
           <div className="h-48 sm:h-72 w-full bg-black rounded-xl opacity-20 shadow-xl hover:cursor-pointer hover:opacity-30"></div>
         </section>
-        <section className="container mx-auto p-2 md:mt-14 lg:mt-28">
+        <section className="container mt-5 mx-auto p-2 md:mt-14 lg:mt-28">
           <h2 className="font-semibold text-3xl md:font-bold md:text-5xl">体験を検索</h2>
           <p className="mt-2 lg:mt-4 lg:text-lg">農家さんが開催する、直接対面型または実践型のユニークな体験</p>
           <Scroll datas={agriExperience} />
