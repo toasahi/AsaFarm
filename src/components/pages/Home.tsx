@@ -47,7 +47,7 @@ export const Home: VFC = memo(() => {
             className="bg-cover bg-center h-full"
             style={{ backgroundImage: `url("https://source.unsplash.com/QFmNQXLPbZc")` }}
           >
-            <div className="inline-block bg-white rounded-lg absolute right-0 h-4/5  md:w-72 md:mt-12 md:mr-28 lg:w-96 lg:mt-16 lg:mr-36 "></div>
+            {/* <div className="inline-block bg-white rounded-lg absolute right-0 h-4/5  md:w-72 md:mt-12 md:mr-28 lg:w-96 lg:mt-16 lg:mr-36 "></div> */}
           </div>
         </section>
         <section className="container mt-5 mx-auto p-2 md:mt-14 lg:mt-28">
