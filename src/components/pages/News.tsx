@@ -7,7 +7,7 @@ export const News: VFC = memo(() => {
     <Main>
       <section>
         <div className="container mx-auto">
-          <h2 className="text-3xl font-semibold text-center mt-4 lg:my-5 lg:text-6xl">NEWS</h2>
+          <h2 className="text-primary  text-3xl font-semibold text-center mt-4 lg:my-5 lg:text-6xl">NEWS</h2>
           <div className="flex flex-wrap space-y-6 items-center justify-center sm:justify-between">
             <div className="w-1/3 pr-3 space-y-3 flex-70 sm:flex-0">
               <div className="h-56 w-full rounded-xl lg:h-72 lg:w-80 shadow-lg">
