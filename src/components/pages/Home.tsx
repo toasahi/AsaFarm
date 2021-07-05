@@ -42,6 +42,14 @@ export const Home: VFC = memo(() => {
   return (
     <Main>
       <main>
+        <section className="flex sticky top-24 z-10 sm:hidden justify-center items-center">
+          <div className="w-1/2 h-16 bg-white">
+            <h2>ログイン</h2>
+          </div>
+          <div className="w-1/2 h-16 bg-green-500">
+            <h2>AsaFarmとは?</h2>
+          </div>
+        </section>
         <section className="relative h-md lg:h-lg">
           <div
             className="bg-cover bg-center h-full"

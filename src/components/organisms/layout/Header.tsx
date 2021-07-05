@@ -7,7 +7,9 @@ import { Link, useHistory } from 'react-router-dom';
 export const Header: VFC = memo(() => {
   const history = useHistory();
   const [drop, setDrop] = useState(false);
+  const [menu, setMenu] = useState(true);
   const onClickDrop = () => setDrop(!drop);
+  const onClickMenu = () => setMenu(!menu);
   const onClickLogin = () => history.push('/home/login');
   const headerRoute = [
     {
@@ -55,16 +57,39 @@ export const Header: VFC = memo(() => {
         </div>
       </nav>
       <div className="flex justify-between items-center  sm:px-12">
-        <div className="pr-4 lg:pr-24">
+        <div className="hidden pr-4 sm:block lg:pr-24">
           <SecondaryButton onClick={onClickLogin}>ログイン</SecondaryButton>
         </div>
         <div className="block pr-2 lg:hidden">
-          <button className="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:border-green-300">
-            <svg className="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-              <title>Menu</title>
-              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-            </svg>
+          <button
+            className="flex items-center px-4 py-2 border rounded text-teal-200 border-teal-400 hover:border-green-300"
+            onClick={onClickMenu}
+          >
+            {menu ? (
+              <svg className="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <title>Menu</title>
+                <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+              </svg>
+            ) : (
+              <svg className="fill-current h-3 w-3" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect
+                  width="50"
+                  height="5"
+                  transform="matrix(0.707107 -0.707107 -0.707107 -0.707107 3.53516 38.8909)"
+                  fill="#0B0B0B"
+                  fillOpacity="0.7"
+                />
+                <rect
+                  width="50"
+                  height="5"
+                  transform="matrix(-0.707107 -0.707107 -0.707107 0.707107 38.8906 35.3553)"
+                  fill="#0B0B0B"
+                  fillOpacity="0.7"
+                />
+              </svg>
+            )}
           </button>
+          {/* <p className="text-primary opacity-70 text-base">Menu</p> */}
         </div>
       </div>
     </header>
