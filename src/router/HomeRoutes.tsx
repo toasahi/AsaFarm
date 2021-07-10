@@ -5,6 +5,7 @@ import { Page404 } from 'components/pages/Page404';
 import { Service } from 'components/pages/Service';
 import { News } from 'components/pages/News';
 import { Contact } from 'components/pages/Contact';
+import { Details } from 'components/pages/Details';
 
 export const homeRoutes = [
   {
@@ -19,8 +20,13 @@ export const homeRoutes = [
   },
   {
     path: '/news',
-    exact: false,
+    exact: true,
     children: <News />,
+  },
+  {
+    path: '/news/:id',
+    exact: false,
+    children: <Details />,
   },
   {
     path: '/service',
