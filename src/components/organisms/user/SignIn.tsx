@@ -23,24 +23,14 @@ export const SignIn: VFC<Props> = memo((props) => {
         <form>
           <div>
             <div className="text-sm font-bold text-gray-600 tracking-wide">メールアドレス</div>
-            <PrimaryInput
-              inputType="text"
-              value={userEmail}
-              onChange={onChangeUserEmail}
-              placeholder="test@test.gmail"
-            />
+            <PrimaryInput inputType="text" value={userEmail} onChange={onChangeUserEmail} />
           </div>
           <div className="mt-8">
             <div className="flex justify-between items-center">
               <div className="text-sm font-bold text-gray-600 tracking-wide">パスワード</div>
             </div>
 
-            <PrimaryInput
-              inputType="password"
-              value={userPass}
-              onChange={onChangeUserPass}
-              placeholder="Enter Your Password"
-            />
+            <PrimaryInput inputType="password" value={userPass} onChange={onChangeUserPass} />
           </div>
           <div className="mt-10">
             <PrimaryButton>ログイン</PrimaryButton>

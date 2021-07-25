@@ -23,7 +23,7 @@ export const Contact: VFC = memo(() => {
               <input
                 type="text"
                 onChange={onChangename}
-                className="text-lg mt-2 py-1 block w-full border-gray-300 border rounded-lg focus:outline-none"
+                className="text-lg mt-2 py-1 pl-2 block w-full border-gray-300 border rounded-lg focus:outline-none"
                 value={name}
               />
             </div>
@@ -32,7 +32,7 @@ export const Contact: VFC = memo(() => {
               <input
                 type="text"
                 onChange={onChangeEmail}
-                className="text-lg mt-2 py-1 block w-full border-gray-300 border rounded-lg focus:outline-none"
+                className="text-lg mt-2 py-1 pl-2 block w-full border-gray-300 border rounded-lg focus:outline-none"
                 value={email}
               />
             </div>
@@ -41,14 +41,14 @@ export const Contact: VFC = memo(() => {
               <input
                 type="text"
                 onChange={onChangeSubject}
-                className="text-lg mt-2 py-1 block w-full border-gray-300 border rounded-lg focus:outline-none"
+                className="text-lg mt-2 py-1 pl-2 block w-full border-gray-300 border rounded-lg focus:outline-none"
                 value={subject}
               />
             </div>
             <div className="px-10 mt-4 text-md font-bold text-gray-600 tracking-wide">
               <span className="text-white bg-red-500 text-xs p-1 rounded-xl mr-2">必須</span>お問い合わせ内容
               <textarea
-                className="text-lg mt-2 py-1 block w-full border-gray-300 border rounded-lg focus:outline-none"
+                className="text-lg mt-2 py-1 pl-2 block w-full border-gray-300 border rounded-lg focus:outline-none"
                 onChange={onChangeMatter}
                 cols={30}
                 rows={10}

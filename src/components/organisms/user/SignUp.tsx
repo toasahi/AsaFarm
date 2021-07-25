@@ -26,32 +26,18 @@ export const SignUp: VFC<Props> = memo((props) => {
       <div className="mt-8">
         <form>
           <div className="mt-8">
-            <div className="text-sm font-bold text-gray-600 tracking-wide">FirstName</div>
-            <PrimaryInput inputType="text" value={firstName} onChange={onChangeFirstName} placeholder="Toda" />
-          </div>
-          <div className="mt-8">
-            <div className="text-sm font-bold text-gray-600 tracking-wide">LastName</div>
-            <PrimaryInput inputType="text" value={lastName} onChange={onChangeLastName} placeholder="Asahi" />
+            <div className="text-sm font-bold text-gray-600 tracking-wide">名前</div>
+            <PrimaryInput inputType="text" value={lastName} onChange={onChangeLastName} />
           </div>
           <div className="mt-8">
             <div className="text-sm font-bold text-gray-600 tracking-wide">メールアドレス</div>
 
-            <PrimaryInput
-              inputType="text"
-              value={userEmail}
-              onChange={onChangeUserEmail}
-              placeholder="test@test.gmail"
-            />
+            <PrimaryInput inputType="text" value={userEmail} onChange={onChangeUserEmail} />
           </div>
           <div className="mt-8">
             <div className="text-sm font-bold text-gray-600 tracking-wide">パスワード</div>
 
-            <PrimaryInput
-              inputType="password"
-              value={userPass}
-              onChange={onChangeUserPass}
-              placeholder="Enter Your Password"
-            />
+            <PrimaryInput inputType="password" value={userPass} onChange={onChangeUserPass} />
           </div>
           <div className="mt-10">
             <PrimaryButton>アカウントを作成</PrimaryButton>
