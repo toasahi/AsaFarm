@@ -22,13 +22,15 @@
     "build": "craco build",
     "test": "craco test",
     "type-check": "tsc --pretty --noEmit",
-    "lint-fix": "eslint --ext ts, --ext js,--ext tsx './src/' && prettier --write './src/**/*.{js,ts,tsx}'",
+    "lint-fix": "eslint . --ext ts --ext tsx --ext js && prettier --write \"**/*.{js,ts,tsx}\"",
+    "lint": "eslint src --ext .ts,.tsx",
+    "prettier": "prettier --write \"**/*.{js,ts,tsx}\"",
+    "test-all": "npm run lint && npu run type-check && npm run prettier",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
-      "react-app",
-      "react-app/jest"
+      "react-app"
     ]
   },
   "browserslist": {
@@ -53,16 +55,18 @@
     "lint-staged": "^11.0.0",
     "postcss": "^7.0.35",
     "prettier": "^2.3.0",
+    "prisma": "^2.25.0",
     "react-router-dom": "^5.2.0",
+    "recoil": "^0.3.1",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.1.2"
   },
-  "husky" : {
-    "hooks" : {
-      "precommit" : "lint-staged"
+  "husky": {
+    "hooks": {
+      "precommit": "lint-staged"
     }
   },
-  "lint-staged" : {
-    "*.(ts|tsx)" : [
+  "lint-staged": {
+    "*.(ts|tsx)": [
       "npm run lint-fix"
     ]
   }
