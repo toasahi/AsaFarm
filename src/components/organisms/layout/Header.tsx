@@ -10,18 +10,18 @@ export const Header: VFC = memo(() => {
   const [menu, setMenu] = useState(true);
   const onClickDrop = () => setDrop(!drop);
   const onClickMenu = () => setMenu(!menu);
-  const onClickLogin = () => history.push('/home/login');
+  const onClickLogin = () => history.push('login');
   const headerRoute = [
     {
-      to: '/home/news',
+      to: 'news',
       children: 'ニュース',
     },
     {
-      to: '/home/service',
+      to: 'service',
       children: 'サービス',
     },
     {
-      to: '/home/contact',
+      to: 'contact',
       children: 'お問い合わせ',
     },
   ];
@@ -34,16 +34,15 @@ export const Header: VFC = memo(() => {
         <ul className="hidden lg:flex md:items-center md:w-auto md:h-full">
           <li className="">
             <div className="flex items-center mt-0 mr-8">
-              <Link to="/home/vegetable" className="block text-xl text-center font-light lg:inline-block">
+              <Link to="vegetable" className="block text-xl text-center font-light lg:inline-block">
                 野菜
               </Link>
               <Polygon onClickDrop={onClickDrop} drop={drop} />
             </div>
           </li>
           {headerRoute.map((route, index) => (
-            <li className="">
+            <li key={index} className="">
               <Link
-                key={index}
                 to={route.to}
                 className="block mt-0 text-xl text-center font-light lg:inline-block mr-8 hover:border-b-2  hover:border-green-300"
               >

@@ -15,7 +15,7 @@ export const Login: VFC = memo(() => {
     <>
       <div className="lg:flex">
         <div className="lg:w-1/2 xl:max-w-screen-sm">
-          <Link to="/home" className="py-12 bg-green-100 lg:bg-white flex justify-center lg:justify-start lg:px-12">
+          <Link to="/" className="py-12 bg-green-100 lg:bg-white flex justify-center lg:justify-start lg:px-12">
             <div></div>
             <div className="text-2xl text-green-500 tracking-wide ml-2 font-semibold">AsaFarm</div>
           </Link>
