@@ -2,6 +2,7 @@ import { Main } from 'components/layout/Main';
 import { Scroll } from 'components/organisms/Scroll';
 import { memo, VFC } from 'react';
 import ygvegetable from '../../Images/ygvegetable.jpeg';
+import riceField from '../../Images/rice_field.jpeg';
 
 export const Home: VFC = memo(() => {
   const kindVegetable = [
@@ -24,7 +25,7 @@ export const Home: VFC = memo(() => {
 
   const agriExperience = [
     {
-      imageUrl: ygvegetable,
+      imageUrl: riceField,
       imageDescription: '収穫',
       children: '収穫体験',
     },

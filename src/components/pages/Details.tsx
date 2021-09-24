@@ -1,12 +1,16 @@
+import { Main } from 'components/layout/Main';
 import { memo, VFC } from 'react';
 import { useParams } from 'react-router';
 
 export const Details: VFC = memo(() => {
   const param = useParams<{ id: string }>();
-  console.log(param.id);
   return (
-    <>
-      <h1>詳細ページです</h1>
-    </>
+    <Main>
+      <section>
+        <div className="container mx-auto">
+          <h1 className="text-4xl font-semibold text-center mt-9">詳細ページ</h1>
+        </div>
+      </section>
+    </Main>
   );
 });
