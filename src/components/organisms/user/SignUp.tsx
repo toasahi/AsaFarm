@@ -14,10 +14,8 @@ type Props = {
 
 export const SignUp: VFC<Props> = memo((props) => {
   const { userEmail, userPass, onChangeUserEmail, onChangeUserPass, onClickLogin } = props;
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
-  const onChangeFirstName = (event: ChangeEvent<HTMLInputElement>) => setFirstName(event.target.value);
-  const onChangeLastName = (event: ChangeEvent<HTMLInputElement>) => setLastName(event.target.value);
+  const [name, setName] = useState('');
+  const onChangeName = (event: ChangeEvent<HTMLInputElement>) => setName(event.target.value);
   return (
     <>
       <h2 className="text-center text-4xl font-semibold text-primary lg:text-left xl:text-2xl xl:font-bold">
@@ -27,7 +25,7 @@ export const SignUp: VFC<Props> = memo((props) => {
         <form>
           <div className="mt-8">
             <div className="text-sm font-bold text-gray-600 tracking-wide">名前</div>
-            <PrimaryInput inputType="text" value={lastName} onChange={onChangeLastName} />
+            <PrimaryInput inputType="text" value={name} onChange={onChangeName} />
           </div>
           <div className="mt-8">
             <div className="text-sm font-bold text-gray-600 tracking-wide">メールアドレス</div>

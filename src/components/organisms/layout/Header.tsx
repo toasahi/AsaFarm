@@ -1,17 +1,18 @@
 import { Icon } from 'components/atoms/Icon';
-import { Polygon } from 'components/atoms/Polygon';
 import { SecondaryButton } from 'components/atoms/SecondaryButton';
 import { memo, useState, VFC } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 
 export const Header: VFC = memo(() => {
   const history = useHistory();
-  const [drop, setDrop] = useState(false);
   const [menu, setMenu] = useState(true);
-  const onClickDrop = () => setDrop(!drop);
   const onClickMenu = () => setMenu(!menu);
   const onClickLogin = () => history.push('login');
   const headerRoute = [
+    {
+      to: 'vegetable',
+      children: '野菜',
+    },
     {
       to: 'news',
       children: 'ニュース',
@@ -32,14 +33,13 @@ export const Header: VFC = memo(() => {
           <Icon />
         </div>
         <ul className="hidden lg:flex md:items-center md:w-auto md:h-full">
-          <li className="">
+          {/* <li className="">
             <div className="flex items-center mt-0 mr-8">
               <Link to="vegetable" className="block text-xl text-center font-light lg:inline-block">
                 野菜
               </Link>
-              <Polygon onClickDrop={onClickDrop} drop={drop} />
             </div>
-          </li>
+          </li> */}
           {headerRoute.map((route, index) => (
             <li key={index} className="">
               <Link
