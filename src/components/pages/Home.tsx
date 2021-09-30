@@ -3,6 +3,7 @@ import { Scroll } from 'components/organisms/Scroll';
 import { memo, VFC } from 'react';
 import ygvegetable from '../../Images/ygvegetable.jpeg';
 import riceField from '../../Images/rice_field.jpeg';
+import { Link, useHistory } from 'react-router-dom';
 
 export const Home: VFC = memo(() => {
   const kindVegetable = [
@@ -40,15 +41,18 @@ export const Home: VFC = memo(() => {
       children: '生活体験',
     },
   ];
+
+  const history = useHistory();
+  const onClickLogin = () => history.push('/login');
   return (
     <Main>
       <main>
-        <section className="flex sticky top-24 z-10 sm:hidden justify-center items-center">
-          <div className="w-1/2 h-16 bg-white">
-            <h2>ログイン</h2>
+        <section className="flex sticky top-24 z-10 md:hidden justify-center items-center">
+          <div className="w-1/2 h-16 bg-white" onClick={onClickLogin}>
+            <h2 className="text-lg p-5 text-center">ログイン</h2>
           </div>
-          <div className="w-1/2 h-16 bg-green-500">
-            <h2>AsaFarmとは?</h2>
+          <div className="w-1/2 h-16 bg-green-500 relative">
+            <h2 className="text-white text-lg p-5 text-center">AsaFarmとは?</h2>
           </div>
         </section>
         <section className="relative h-md lg:h-lg">
