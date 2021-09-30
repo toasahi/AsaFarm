@@ -15,10 +15,15 @@ export const Login: VFC = memo(() => {
     <>
       <div className="lg:flex">
         <div className="lg:w-1/2 xl:max-w-screen-sm">
-          <Link to="/" className="py-12 bg-green-100 lg:bg-white flex justify-center lg:justify-start lg:px-12">
+          {/* <Link to="/" className="h-16 bg-gray-50 lg:bg-white flex justify-center lg:justify-start lg:px-12">
             <div></div>
             <div className="text-2xl text-green-500 tracking-wide ml-2 font-semibold">AsaFarm</div>
-          </Link>
+          </Link> */}
+          <div className="h-24 flex items-center bg-gray-50 lg:bg-white">
+            <Link to="/" className="text-2xl px-12 justify-center text-green-500 tracking-wide font-semibold">
+              AsaFarm
+            </Link>
+          </div>
           <div className="mt-10 px-12 sm:px-24 md:px-48 lg:px-12 lg:mt-8 xl:mt-8 xl:max-w-screen-2xl">
             {userLogin ? (
               <SignIn
