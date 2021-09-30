@@ -16,6 +16,7 @@ export const PrimaryInput: VFC<Props> = memo((props) => {
       onChange={onChange}
       value={value}
       placeholder={placeholder}
+      autoComplete="off"
     />
   );
 });

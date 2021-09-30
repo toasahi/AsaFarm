@@ -15,7 +15,7 @@ export const Card: VFC<Props> = memo((props) => {
         <Link to="/">
           <img
             src={imageUrl}
-            className="h-full w-full rounded-xl hover:opacity-70 lg:w-full lg:h-full"
+            className="h-full w-full object-cover rounded-xl hover:opacity-70 lg:w-full lg:h-full"
             alt={imageDescription}
           />
         </Link>

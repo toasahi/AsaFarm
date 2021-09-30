@@ -3,6 +3,7 @@ import { Scroll } from 'components/organisms/Scroll';
 import { memo, VFC } from 'react';
 import ygvegetable from '../../Images/ygvegetable.jpeg';
 import riceField from '../../Images/rice_field.jpeg';
+import filedDan from '../../Images/fieldDan.jpeg';
 import { Link, useHistory } from 'react-router-dom';
 
 export const Home: VFC = memo(() => {
@@ -56,10 +57,7 @@ export const Home: VFC = memo(() => {
           </div>
         </section>
         <section className="relative h-md lg:h-lg">
-          <div
-            className="bg-cover bg-center h-full"
-            style={{ backgroundImage: `url("https://source.unsplash.com/QFmNQXLPbZc")` }}
-          >
+          <div className="bg-cover bg-center h-full object-cover" style={{ backgroundImage: `url(${filedDan})` }}>
             {/* <div className="inline-block bg-white rounded-lg absolute right-0 h-4/5  md:w-72 md:mt-12 md:mr-28 lg:w-96 lg:mt-16 lg:mr-36 "></div> */}
           </div>
         </section>

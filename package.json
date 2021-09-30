@@ -19,7 +19,7 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "craco start",
+    "start": "npm run prettier && craco start",
     "build": "craco build",
     "test": "craco test",
     "type-check": "tsc --pretty --noEmit",
