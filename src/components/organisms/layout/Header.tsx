@@ -32,34 +32,27 @@ export const Header: VFC = memo(() => {
         <div className="flex items-center  text-white mr-6">
           <Icon />
         </div>
-        <ul className="hidden lg:flex md:items-center md:w-auto md:h-full">
-          {/* <li className="">
-            <div className="flex items-center mt-0 mr-8">
-              <Link to="vegetable" className="block text-xl text-center font-light lg:inline-block">
-                野菜
-              </Link>
-            </div>
-          </li> */}
+        <ul className="hidden md:flex md:items-center md:w-auto md:h-full">
           {headerRoute.map((route, index) => (
             <li key={index} className="">
               <Link
                 to={route.to}
-                className="block mt-0 text-xl text-center font-light lg:inline-block mr-8 hover:border-b-2  hover:border-green-300"
+                className="block mt-0 text-xl whitespace-nowrap text-center font-light lg:inline-block mr-8 hover:border-b-2  hover:border-green-300"
               >
                 {route.children}
               </Link>
             </li>
           ))}
         </ul>
-        <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+        {/* <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
           <div className="text-sm lg:flex-grow"></div>
-        </div>
+        </div> */}
       </nav>
-      <div className="flex justify-between items-center  sm:px-12">
-        <div className="hidden pr-4 sm:block lg:pr-24">
+      <div className="flex justify-between items-center md:px-2 lg:px-12">
+        <div className="hidden md:block w-24  lg:mr-20">
           <SecondaryButton onClick={onClickLogin}>ログイン</SecondaryButton>
         </div>
-        <div className="block pr-2 lg:hidden">
+        <div className="block pr-2 md:hidden">
           <button
             className="flex items-center px-4 py-2 border rounded text-teal-200 border-teal-400 hover:border-green-300"
             onClick={onClickMenu}
